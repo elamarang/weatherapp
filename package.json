@@ -2,7 +2,6 @@
   "name": "weatherapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://elamarang.github.io/weatherapp",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -11,13 +10,13 @@
     "react-animated-weather": "^4.0.1",
     "react-dom": "^16.13.1",
     "react-particles-js": "^3.2.1",
+    "react-rain-animation": "^1.0.4",
     "react-scripts": "3.4.1",
+    "react-snowflakes": "^1.0.0",
     "react-tilt": "^0.1.4",
     "tachyons": "^4.12.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
