@@ -5,7 +5,7 @@ import GetCity from './Components/GetCity';
 import Result from './Components/Result';
 import Particles from 'react-particles-js';
 import Logo from './Components/Logo';
-
+import Snow from 'react-snow-effect';
 const ApiKey="2167f2df60ba36b6ecdcb300c0e4167c";
 
 const particlesOptions = {
@@ -132,6 +132,7 @@ else if(weather==='50d'||weather==='50n'){
       <Particles className='particle'
       params={particlesOptions}
       />
+      <Snow/>
       <Navigation/>
       <Logo/>
       <GetCity 
