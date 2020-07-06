@@ -37,20 +37,27 @@ class App extends Component {
     super();
     this.state = initialState;
   }
-
+ /*Stores the text that is being entered in textbox into state*/
   onInputChange = (event) => {
     this.setState({input:event.target.value});
   }
+
+   /*Stores the submitted name into state*/
   onCitySubmit = (event) => {
     this.setState({CityName:this.state.input});
+
+    /* Hit the API with the entered city name*/
     this.fetchWeatherData(this.state.input);         
   }
+  /* Hit the API with the entered city name while pressing Enter buton as well*/
   onCityEnter = (event) =>{
   if(event.key==='Enter'){
     this.setState({CityName:this.state.input});
     this.fetchWeatherData(this.state.input);      
   }
   }
+
+  /*function to get the weather details using API*/
   fetchWeatherData =  (name) => {
     
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&appid=${ApiKey}`)
@@ -75,6 +82,7 @@ class App extends Component {
     });
   }
 
+/* Sets the icon and color values required to generate the weather animation*/
 setAnimationDetails = (weather) =>{
   
 if(weather==='04d'||weather==='04n'){
